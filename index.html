@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sachin Tiwari's Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Fonts and AOS CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Pacifico&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="name">SACHIN TIWARI</div>
+      <div class="nav-list">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button class="theme-toggle" id="themeSwitcher">Switch Theme</button></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero" data-aos="fade-up">
+    <div class="profile"></div>
+    <div class="details">
+      <div class="heading">Creative</div>
+      <div class="main-page">PORTFOLIO</div>
+      <div class="tagline">
+        <div>Developer | Artist | Web-designer</div>
+        <div>developed by: Sachin Tiwari</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about-section" id="about-section" data-aos="fade-up">
+    <div class="about-left">
+      <h1>WELCOME TO<br>MY PORTFOLIO</h1>
+      <p class="intro-text" id="introText">Hi, I’m Sachin Tiwari, a passionate developer and designer focused on building clean, user-friendly web applications.
+        <span class="more-text" id="moreText" style="display: none;">
+          I specialize in front-end technologies and UI/UX design. With a love for painting and a mind for structured code, I aim to blend creativity with functionality.
+        </span>
+      </p>
+      <button id="toggleButton" class="learn-more-btn">Learn More <span class="arrow">➜</span></button>
+    </div>
+    <div class="about-right" data-aos="fade-left">
+      <img src="/image/about.png" alt="Sachin Tiwari">
+    </div>
+  </section>
+<!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true, offset: 100 });
+
+    document.getElementById("toggleButton").addEventListener("click", () => {
+      const moreText = document.getElementById("moreText");
+      const btn = document.getElementById("toggleButton");
+      if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        btn.innerHTML = "Show Less <span class='arrow'>⬆</span>";
+      } else {
+        moreText.style.display = "none";
+        btn.innerHTML = "Learn More <span class='arrow'>➜</span>";
+      }
+    });
+
+    document.getElementById("themeSwitcher").addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+    });
+  </script>
+</body>
+
+
+</html>
