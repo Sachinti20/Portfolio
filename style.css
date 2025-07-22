@@ -243,6 +243,22 @@
   font-size: 1rem;
   line-height: 1.6;
 }
+.project-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: #00e6e6;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  color: #fff;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
 
 .tech-stack-box {
   border-left: 2px dashed #fff;
